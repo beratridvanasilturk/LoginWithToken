@@ -48,4 +48,22 @@ class MockLoginStorageService : LoginStorageService {
     }
 }
 
+// Output'u da Mock etmemiz gereklidir, stubslari otomatik hatadan aldik
+class MockRootViewModelOutput : RootViewModelOutput {
+    
+    enum Check {
+        case loginVC
+        case mainVC
+    }
+    
+    var check : [Check] = []
+    
+    func showMainVC() {
+        check.append(.mainVC)
+    }
+    func showLoginVC() {
+        check.append(.loginVC)
+    }
+}
+
 
