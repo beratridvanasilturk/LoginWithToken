@@ -34,9 +34,36 @@ final class LoginWithTokenTests: XCTestCase {
         
     }
 
-    func testExample() throws {
+    // Empty dondugunde login olmamiz gerektigi icin login ekranina gondermelidir
+    func testShowLoginVC_whenLoginStorageReturnsEmptyUserAccessToken() throws {
         
+        loginStorageService.storage = [:]
         
+        viewModel.checkLogin()
+        
+        XCTAssertEqual(output.checkArray.first, .loginVC)
+
+    }
+    
+    // Token bos geldiginde login ekranina yonlendirmeli, main'e degil. Main'e gonderdiginde fail almaliyiz
+    func testShowMainVC_whenLoginStorageReturnsEmptyString() throws {
+        // Herhangi bir string gelirse AccessToken geldi anlamindadir kafamiz gore verdik stringi
+        loginStorageService.storage["ACCESS_TOKEN"] = ""
+        
+        viewModel.checkLogin()
+        
+        XCTAssertEqual(output.checkArray.first, .loginVC)
+
+    }
+    
+    // Access Token'in UUID gibi bir sey dondurdugunde main ekranina bizi gondermeli
+    func testShowMainVC_whenLoginStorageReturnsUserAccessToken() throws {
+        // Herhangi bir string gelirse AccessToken geldi anlamindadir kafamiz gore verdik stringi
+        loginStorageService.storage["ACCESS_TOKEN"] = "JASFD3423445SDLF"
+        
+        viewModel.checkLogin()
+        
+        XCTAssertEqual(output.checkArray.first, .mainVC)
 
     }
 }
@@ -55,6 +82,7 @@ class MockLoginStorageService : LoginStorageService {
         // Ona deger olarak verilen token'a userAccessTokenKey'i koyduk
         storage[userAccessTokenKey] = token
     }
+    
     func getUserAccessToken() -> String? {
         // Istenilen anahtari vererek degeri almaya calisacagiz
         return storage[userAccessTokenKey]
@@ -69,14 +97,12 @@ class MockRootViewModelOutput : RootViewModelOutput {
         case mainVC
     }
     
-    var check : [Check] = []
+    var checkArray : [Check] = []
     
     func showMainVC() {
-        check.append(.mainVC)
+        checkArray.append(.mainVC)
     }
     func showLoginVC() {
-        check.append(.loginVC)
+        checkArray.append(.loginVC)
     }
 }
-
-
