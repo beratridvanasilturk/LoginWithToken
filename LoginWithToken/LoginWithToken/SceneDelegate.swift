@@ -17,7 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Root VC'yi yazacagiz
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = RootViewController()
+        let viewModel = RootViewModel()
+        // NavigationController icerisine almamizin sebebi VClar arasi gecis icindir
+        window?.rootViewController = UINavigationController(rootViewController: RootViewController(viewModel: viewModel))
         // Bu islemler sonucunda Root VC'un gosterilmesi gerekir
         window?.makeKeyAndVisible()
         
