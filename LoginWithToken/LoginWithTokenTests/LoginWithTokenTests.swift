@@ -10,20 +10,33 @@ import XCTest
 
 final class LoginWithTokenTests: XCTestCase {
 
-    weak var viewModel : RootViewModel!
+    private var viewModel : RootViewModel!
+    // Mock datalarin classlarini ekledikten sonra setUpWithError func icerisinde atamak icin kullanilir
+    private var loginStorageService: MockLoginStorageService!
+    private var output: MockRootViewModelOutput!
     
     override func setUpWithError() throws {
         
+        loginStorageService = MockLoginStorageService()
         // ViewModel'i init ettik
-        viewModel = RootViewModel(loginStorageService: <#T##LoginStorageService#>)
+        viewModel = RootViewModel(loginStorageService: loginStorageService)
+        output = MockRootViewModelOutput()
+        
+        // ViewModel her cikti yaptiginda 2 satir yukaridaki viewModel = RootVM .. 'da yakalayalim ve output icerisindeki diziden veya listeden kontrol edebilelim diye bu atamayi gerceklestirdik
+        viewModel.output = output
         
     }
 
     override func tearDownWithError() throws {
         
+        viewModel = nil
+        loginStorageService = nil
+        
     }
 
     func testExample() throws {
+        
+        
 
     }
 }
