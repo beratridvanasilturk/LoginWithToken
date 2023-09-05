@@ -8,7 +8,7 @@
 import Foundation
 
 // Veriyi Yani Token'i nerede kaydetmek istiyorsak bu StoreService dosyasi icerisinde tutacagiz, bu internetten cekme olabilirdi UserDefaults'ta tutma veya CoreData'da tutma vs olabilirdi.
-
+// LoginStorageService'i Scene Delegate'de Init ettik
 protocol LoginStorageService {
         
     // AccesToken degiskenin ismini burada tutacagiz / Mock Data olarak dusunulebilir
