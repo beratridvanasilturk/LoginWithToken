@@ -15,6 +15,8 @@
 		EACDD1492AA75EDC00CD08C4 /* LoginWithTokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1482AA75EDC00CD08C4 /* LoginWithTokenTests.swift */; };
 		EACDD1532AA75EDC00CD08C4 /* LoginWithTokenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1522AA75EDC00CD08C4 /* LoginWithTokenUITests.swift */; };
 		EACDD1552AA75EDC00CD08C4 /* LoginWithTokenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1542AA75EDC00CD08C4 /* LoginWithTokenUITestsLaunchTests.swift */; };
+		EACDD1632AA7607A00CD08C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1622AA7607A00CD08C4 /* LoginViewController.swift */; };
+		EACDD1652AA760CD00CD08C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1642AA760CD00CD08C4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EACDD14E2AA75EDC00CD08C4 /* LoginWithTokenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginWithTokenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACDD1522AA75EDC00CD08C4 /* LoginWithTokenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithTokenUITests.swift; sourceTree = "<group>"; };
 		EACDD1542AA75EDC00CD08C4 /* LoginWithTokenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithTokenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EACDD1622AA7607A00CD08C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EACDD1642AA760CD00CD08C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,9 @@
 		EACDD1302AA75ED900CD08C4 /* LoginWithToken */ = {
 			isa = PBXGroup;
 			children = (
+				EACDD1612AA7606600CD08C4 /* View */,
 				EACDD1312AA75ED900CD08C4 /* AppDelegate.swift */,
 				EACDD1332AA75ED900CD08C4 /* SceneDelegate.swift */,
-				EACDD1352AA75ED900CD08C4 /* RootViewController.swift */,
 				EACDD13A2AA75EDB00CD08C4 /* Assets.xcassets */,
 				EACDD13C2AA75EDB00CD08C4 /* LaunchScreen.storyboard */,
 				EACDD13F2AA75EDB00CD08C4 /* Info.plist */,
@@ -122,6 +126,16 @@
 				EACDD1542AA75EDC00CD08C4 /* LoginWithTokenUITestsLaunchTests.swift */,
 			);
 			path = LoginWithTokenUITests;
+			sourceTree = "<group>";
+		};
+		EACDD1612AA7606600CD08C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EACDD1352AA75ED900CD08C4 /* RootViewController.swift */,
+				EACDD1622AA7607A00CD08C4 /* LoginViewController.swift */,
+				EACDD1642AA760CD00CD08C4 /* MainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACDD1632AA7607A00CD08C4 /* LoginViewController.swift in Sources */,
 				EACDD1362AA75ED900CD08C4 /* RootViewController.swift in Sources */,
 				EACDD1322AA75ED900CD08C4 /* AppDelegate.swift in Sources */,
 				EACDD1342AA75ED900CD08C4 /* SceneDelegate.swift in Sources */,
+				EACDD1652AA760CD00CD08C4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
