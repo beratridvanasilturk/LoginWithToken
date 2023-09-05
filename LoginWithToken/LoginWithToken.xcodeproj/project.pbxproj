@@ -19,6 +19,8 @@
 		EACDD1652AA760CD00CD08C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1642AA760CD00CD08C4 /* MainViewController.swift */; };
 		EACDD1682AA7637E00CD08C4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1672AA7637E00CD08C4 /* RootViewModel.swift */; };
 		EACDD16A2AA7644200CD08C4 /* RootViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */; };
+		EACDD16D2AA76B2800CD08C4 /* LoginStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD16C2AA76B2800CD08C4 /* LoginStorageService.swift */; };
+		EACDD16F2AA76C8E00CD08C4 /* LoginStorageServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD16E2AA76C8E00CD08C4 /* LoginStorageServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		EACDD1642AA760CD00CD08C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EACDD1672AA7637E00CD08C4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelOutput.swift; sourceTree = "<group>"; };
+		EACDD16C2AA76B2800CD08C4 /* LoginStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageService.swift; sourceTree = "<group>"; };
+		EACDD16E2AA76C8E00CD08C4 /* LoginStorageServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStorageServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		EACDD1302AA75ED900CD08C4 /* LoginWithToken */ = {
 			isa = PBXGroup;
 			children = (
+				EACDD16B2AA76B0A00CD08C4 /* StorageService */,
 				EACDD1662AA7636300CD08C4 /* ViewModel */,
 				EACDD1612AA7606600CD08C4 /* View */,
 				EACDD1312AA75ED900CD08C4 /* AppDelegate.swift */,
@@ -150,6 +155,15 @@
 				EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EACDD16B2AA76B0A00CD08C4 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				EACDD16C2AA76B2800CD08C4 /* LoginStorageService.swift */,
+				EACDD16E2AA76C8E00CD08C4 /* LoginStorageServiceManager.swift */,
+			);
+			path = StorageService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACDD16F2AA76C8E00CD08C4 /* LoginStorageServiceManager.swift in Sources */,
 				EACDD1632AA7607A00CD08C4 /* LoginViewController.swift in Sources */,
 				EACDD1362AA75ED900CD08C4 /* RootViewController.swift in Sources */,
 				EACDD16A2AA7644200CD08C4 /* RootViewModelOutput.swift in Sources */,
+				EACDD16D2AA76B2800CD08C4 /* LoginStorageService.swift in Sources */,
 				EACDD1322AA75ED900CD08C4 /* AppDelegate.swift in Sources */,
 				EACDD1342AA75ED900CD08C4 /* SceneDelegate.swift in Sources */,
 				EACDD1682AA7637E00CD08C4 /* RootViewModel.swift in Sources */,
