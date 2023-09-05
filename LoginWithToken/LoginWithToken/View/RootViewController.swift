@@ -12,7 +12,31 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .gray    }
+        view.backgroundColor = .gray
+        
+    }
+
+    // Endustride User Defaults'ta tokenleri tutmak istemeyiz cunku hem guvenli degildir hem de MVVM yapisina uygun degildir ancak kod olarak bir problemi yoktur is gorecektir ama tokenler'i kontrol etmenin en dogru yolu degildir.
+    func checkLogin() {
+        
+        if let accessToken = UserDefaults.standard.string(forKey: "ACCESS_TOKEN"), !accessToken.isEmpty {
+            // Eger token eslesmesi basarili ise main'e git
+            showMainVC()
+        } else {
+            // Degilse kullanici login olsun
+            showLoginVC()
+        }
+    }
+    
+    func showMainVC() {
+        let mainVC = MainViewController()
+        navigationController?.present(mainVC, animated: true)
+    }
+    
+    func showLoginVC() {
+        let loginVC = LoginViewController()
+        navigationController?.present(loginVC, animated: true)
+    }
 
 
 }
