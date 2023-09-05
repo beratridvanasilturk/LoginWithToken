@@ -18,6 +18,7 @@
 		EACDD1632AA7607A00CD08C4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1622AA7607A00CD08C4 /* LoginViewController.swift */; };
 		EACDD1652AA760CD00CD08C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1642AA760CD00CD08C4 /* MainViewController.swift */; };
 		EACDD1682AA7637E00CD08C4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1672AA7637E00CD08C4 /* RootViewModel.swift */; };
+		EACDD16A2AA7644200CD08C4 /* RootViewModelOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EACDD1622AA7607A00CD08C4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EACDD1642AA760CD00CD08C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EACDD1672AA7637E00CD08C4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				EACDD1672AA7637E00CD08C4 /* RootViewModel.swift */,
+				EACDD1692AA7644200CD08C4 /* RootViewModelOutput.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				EACDD1632AA7607A00CD08C4 /* LoginViewController.swift in Sources */,
 				EACDD1362AA75ED900CD08C4 /* RootViewController.swift in Sources */,
+				EACDD16A2AA7644200CD08C4 /* RootViewModelOutput.swift in Sources */,
 				EACDD1322AA75ED900CD08C4 /* AppDelegate.swift in Sources */,
 				EACDD1342AA75ED900CD08C4 /* SceneDelegate.swift in Sources */,
 				EACDD1682AA7637E00CD08C4 /* RootViewModel.swift in Sources */,
