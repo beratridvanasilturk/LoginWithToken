@@ -7,7 +7,8 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+// RootViewOutput'u delege olarak ayarladiktan sonra View Modelden gelecek output'a gore showMainVC ve showLoginVC funclari calistirilacaktir
+class RootViewController: UIViewController, RootViewModelOutput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
