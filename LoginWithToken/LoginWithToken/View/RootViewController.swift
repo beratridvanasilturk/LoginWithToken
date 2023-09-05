@@ -17,6 +17,7 @@ class RootViewController: UIViewController, RootViewModelOutput {
         super.viewDidLoad()
         
         view.backgroundColor = .gray
+        viewModel.checkLogin()
         
     }
     
