@@ -17,7 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Root VC'yi yazacagiz
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        let viewModel = RootViewModel()
+        // LoginStorageService protokolu ViewModel'e eklendikten sonra burada alinan hata ile RootViewModel( ... ) icerisi duzenlenir
+        // LoginStorageService'in uygulayicisi LogunStorageServiceManager'dir onu belirttik
+        let loginStorageService : LoginStorageService = LoginStorageServiceManager()
+        let viewModel = RootViewModel(loginStorageService: loginStorageService)
         // NavigationController icerisine almamizin sebebi VClar arasi gecis icindir
         window?.rootViewController = UINavigationController(rootViewController: RootViewController(viewModel: viewModel))
         // Bu islemler sonucunda Root VC'un gosterilmesi gerekir
